@@ -13,7 +13,7 @@ $exeName = StringLower($exeName)
 
 If StringLen($exeName) <> 1 Or Not StringIsAlpha($exeName) Then
     MsgBox($MB_ICONERROR, "Error 1 discord : superlila", _
-           "renomme le programme avec le bind pour on/off le clicker")
+           "renomme le programme avec le bind pour on/off le clicker/ rename the executable to the key/bind u want to use to toggle the clicker on/off")
     Exit
 EndIf
 MsgBox($MB_TOPMOST, "CIA", "clicker released by cia, discord : .cia14 or superlila", 1)
@@ -32,8 +32,9 @@ While True
     Local $hWnd = WinActive("[CLASS:GLFW30; REGEXPTITLE:Minecraft.*]")
     If $isOn And $hWnd And _IsPressed("01") Then
         ControlClick($hWnd, "", "", "left", 1)
-        Sleep(Random(50, 52, 1)) ; c'est ici pour changer le délai chat, stv mettre plus de cps réduit les deux premieres value
+        Sleep(Random(50, 52, 1)) ; c'est ici pour changer le dÃ©lai chat, stv mettre plus de cps rÃ©duit les deux premieres value
     EndIf
 	
     Sleep(10)
 WEnd
+
